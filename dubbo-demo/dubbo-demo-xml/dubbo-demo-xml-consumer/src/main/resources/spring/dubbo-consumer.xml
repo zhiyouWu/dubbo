@@ -23,8 +23,10 @@
 
     <dubbo:application name="demo-consumer"/>
 
+    <!-- 指定注册中心地址 -->
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
+    <!-- 使用 dubbo:reference 引入 DemoService 服务, 并配置成Spring Bean -->
     <dubbo:reference id="demoService" check="false" interface="org.apache.dubbo.demo.DemoService"/>
 
 </beans>
